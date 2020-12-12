@@ -75,6 +75,7 @@ class MyHomePage extends StatelessWidget {
                 },
               ),
               TextFormField(
+                obscureText: true,
                 decoration: InputDecoration(labelText: "Password"),
                 onChanged: (v) {
                   _pass = v;
