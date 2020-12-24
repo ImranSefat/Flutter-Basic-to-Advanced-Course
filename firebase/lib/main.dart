@@ -1,3 +1,4 @@
+import 'package:firebase/Screens/ChatScreen.dart';
 import 'package:firebase/Service/authentication_service.dart';
 import 'package:firebase/Timeline.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -39,15 +40,18 @@ class AuthenticationWrapper extends StatelessWidget {
     final firebaseUser = context.watch<User>();
 
     if (firebaseUser != null) {
-      return Timeline(
-        firebaseUser: firebaseUser,
-      );
+      return ChatScreen();
+
+      // Timeline(
+      //   firebaseUser: firebaseUser,
+      // );
     } else {
       return MyHomePage();
     }
   }
 }
 
+// ignore: must_be_immutable
 class MyHomePage extends StatelessWidget {
   String _email;
   String _pass;
